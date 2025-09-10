@@ -1,7 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:upper/core/extensions/context_extension.dart';
+import 'package:upper/core/utils/color_manager.dart';
+import 'package:upper/core/utils/fonts/font_weight_helper.dart';
+
 class StyleManager {
-  // static TextStyle black24Bold(BuildContext context) => GoogleFonts.mulish(
-  //   color: context.color.secondaryColor,
-  //   fontSize: 24.sp,
-  //   fontWeight: FontWeightHelper.bold,
-  // );
+  static TextStyle white71Bold = GoogleFonts.roboto(
+    fontSize: 71.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+    fontStyle: FontStyle.italic,
+    shadows: [
+      Shadow(offset: Offset(3, 3), blurRadius: 3.0, color: Colors.black),
+    ],
+  );
+
+  static TextStyle brand16Medium = GoogleFonts.roboto(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: LightColorManager.brandColor,
+  );
+
+  static TextStyle brand20Medium = GoogleFonts.roboto(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: LightColorManager.textButtonColor,
+  );
+
+  static TextStyle brand32Medium(BuildContext context) => GoogleFonts.roboto(
+    fontSize: 32.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: context.color.textColor,
+  );
 }

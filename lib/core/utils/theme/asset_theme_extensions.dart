@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../app_images.dart';
 
 class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
-  final String? onBoarding;
+  final String? themeImage;
 
-  const AssetThemeExtension({required this.onBoarding});
+  const AssetThemeExtension({required this.themeImage});
 
   @override
-  ThemeExtension<AssetThemeExtension> copyWith({String? onBoarding}) {
-    return AssetThemeExtension(onBoarding: onBoarding ?? this.onBoarding);
+  ThemeExtension<AssetThemeExtension> copyWith({String? themeImage}) {
+    return AssetThemeExtension(themeImage: themeImage ?? this.themeImage);
   }
 
   @override
@@ -20,13 +20,13 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
     if (other is! AssetThemeExtension) {
       return this;
     }
-    return AssetThemeExtension(onBoarding: other.onBoarding);
+    return AssetThemeExtension(themeImage: other.themeImage);
   }
 
   static const AssetThemeExtension light = AssetThemeExtension(
-    onBoarding: AppImages.onBoardingLight,
+    themeImage: AppImages.lightTheme,
   );
   static const AssetThemeExtension dark = AssetThemeExtension(
-    onBoarding: AppImages.onBoardingDark,
+    themeImage: AppImages.darkTheme,
   );
 }
