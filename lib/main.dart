@@ -4,7 +4,11 @@ import 'package:upper/core/routes/app_routes.dart';
 
 import 'core/utils/theme/theme_manager.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await ScreenUtil.ensureScreenSize();
+
   runApp(const MyApp());
 }
 
