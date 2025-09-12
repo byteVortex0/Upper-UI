@@ -32,7 +32,6 @@ class AccountSetup1 extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: ElevatedButtonWidget(
-        buttonColor: Color(0xffF5F7FC),
         textColor: Color(0xffD4D4D4),
         onPressed: () {
           context.pushReplacementNamed(AppRoutes.accountSetup2Path);

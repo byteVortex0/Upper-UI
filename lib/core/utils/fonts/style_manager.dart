@@ -16,17 +16,17 @@ class StyleManager {
     ],
   );
 
-  static TextStyle brand16Medium = GoogleFonts.roboto(
+  static TextStyle brand16Medium ([Color?color])=> GoogleFonts.roboto(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
-    color: LightColorManager.brandColor,
+    color: color??LightColorManager.brandColor,
   );
 
   static TextStyle brand20Medium(BuildContext context, [Color? color]) =>
       GoogleFonts.roboto(
         fontSize: 20.sp,
         fontWeight: FontWeightHelper.medium,
-        color: color ?? LightColorManager.textButtonColor,
+        color: color ?? LightColorManager.textButtonColorLight,
       );
   static TextStyle brand24Medium(BuildContext context, [Color? color]) =>
       GoogleFonts.roboto(

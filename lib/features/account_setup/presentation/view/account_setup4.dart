@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../../../core/utils/color_manager.dart';
+import '../../../../core/utils/fonts/style_manager.dart';
+import '../../../../core/utils/theme/color_theme_extension.dart';
 import 'widgets/account_setup_content_sec.dart';
 import 'widgets/app_bar_widget.dart';
 import 'widgets/elevated_button_widget.dart';
@@ -27,6 +30,7 @@ class _AccountSetup4State extends State<AccountSetup4> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).extension<ColorThemeExtension>()!;
     return Scaffold(
       appBar: const AppBarWidget(),
       body: Padding(
@@ -44,6 +48,7 @@ class _AccountSetup4State extends State<AccountSetup4> {
             const SizedBox(height: 8),
             DropdownButtonFormField<Map<String, String>>(
               value: selectedCountry,
+              dropdownColor: Theme.of(context).scaffoldBackgroundColor,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -62,12 +67,13 @@ class _AccountSetup4State extends State<AccountSetup4> {
               items: countries
                   .map(
                     (country) => DropdownMenuItem<Map<String, String>>(
+                      
                       value: country,
                       child: Row(
                         children: [
-                          Text(country["flag"]!, style: const TextStyle(fontSize: 20)),
+                          Text(country["flag"]!,style:  StyleManager.brand20Medium(context,colors.textColor)),
                           const SizedBox(width: 8),
-                          Text(country["name"]!, style: const TextStyle(fontSize: 16)),
+                          Text(country["name"]!, style: StyleManager.brand16Medium(colors.textColor)),
                         ],
                       ),
                     ),

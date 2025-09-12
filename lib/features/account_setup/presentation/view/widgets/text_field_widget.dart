@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/fonts/style_manager.dart';
+import '../../../../../core/utils/theme/color_theme_extension.dart';
 
 class TextFieldWidget extends StatelessWidget {
   TextFieldWidget({
@@ -18,6 +19,8 @@ class TextFieldWidget extends StatelessWidget {
   IconData? suffixIcon;
   @override
   Widget build(BuildContext context) {
+        final colors = Theme.of(context).extension<ColorThemeExtension>()!;
+
     return Column(
       children: [
         SizedBox(height: 30),
@@ -50,7 +53,7 @@ class TextFieldWidget extends StatelessWidget {
             ),
             prefixIcon:
                 isSuffixIcon
-                    ? Icon(suffixIcon, color: Colors.black, size: 16)
+                    ? Icon(suffixIcon, color: colors.iconColor, size: 16)
                     : null,
             hintText: hintText,
             hintStyle: TextStyle(color: Colors.grey.shade400, fontSize: 14),

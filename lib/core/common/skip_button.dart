@@ -14,7 +14,7 @@ class SkipButton extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: TextButton(
         onPressed: onPressed,
-        child: Text(text ?? 'Skip', style: StyleManager.brand16Medium),
+        child: Text(text ?? 'Skip', style: StyleManager.brand16Medium()),
       ),
     );
   }

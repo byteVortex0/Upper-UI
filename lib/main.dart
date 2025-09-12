@@ -11,10 +11,7 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
 
   runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-       builder: (context) => const MyApp(),
-    ),
+    DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
   );
 }
 
@@ -32,11 +29,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         darkTheme: ThemeManager.darkTheme,
         theme: ThemeManager.lightTheme,
-        themeMode:
-            /*  context.read<ThemeCubit>().isDark  
+        themeMode: ThemeMode.system,
+        /*  context.read<ThemeCubit>().isDark  
                 ? ThemeMode.dark
                 :*/
-            ThemeMode.light,
+        //  ThemeMode.light,
         initialRoute: AppRoutes.splash,
         onGenerateRoute: AppRoutes.onGenerateRoute,
       ),
