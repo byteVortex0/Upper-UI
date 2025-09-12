@@ -5,6 +5,7 @@ import 'package:upper/core/extensions/context_extension.dart';
 import 'package:upper/core/utils/fonts/style_manager.dart';
 
 import '../../../core/common/Custom_button.dart';
+import '../../../core/routes/app_routes.dart';
 import '../../../core/utils/app_images.dart';
 
 class ThemeScreen extends StatelessWidget {
@@ -35,7 +36,11 @@ class ThemeScreen extends StatelessWidget {
                 style: StyleManager.brand32Medium(context),
                 textAlign: TextAlign.center,
               ),
-              CustomButton(onPressed: () {}),
+              CustomButton(
+                onPressed: () {
+                  context.pushReplacementNamed(AppRoutes.accountSetup1Path);
+                },
+              ),
             ],
           ),
         ),

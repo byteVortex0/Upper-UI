@@ -22,15 +22,35 @@ class StyleManager {
     color: LightColorManager.brandColor,
   );
 
-  static TextStyle brand20Medium = GoogleFonts.roboto(
-    fontSize: 20.sp,
-    fontWeight: FontWeightHelper.medium,
-    color: LightColorManager.textButtonColor,
-  );
+  static TextStyle brand20Medium(BuildContext context, [Color? color]) =>
+      GoogleFonts.roboto(
+        fontSize: 20.sp,
+        fontWeight: FontWeightHelper.medium,
+        color: color ?? LightColorManager.textButtonColor,
+      );
+  static TextStyle brand24Medium(BuildContext context, [Color? color]) =>
+      GoogleFonts.roboto(
+        fontSize: 24.sp,
+        fontWeight: FontWeightHelper.medium,
+        color: color ?? context.color.textColor,
+      );
 
   static TextStyle brand32Medium(BuildContext context) => GoogleFonts.roboto(
     fontSize: 32.sp,
     fontWeight: FontWeightHelper.semiBold,
     color: context.color.textColor,
   );
+
+  static TextStyle brand12Regular(BuildContext context, [Color? color]) =>
+      GoogleFonts.roboto(
+        fontSize: 12,
+        fontWeight: FontWeightHelper.regular,
+        color: color ?? context.color.textColor,
+      );
+  static TextStyle brand14Regular(BuildContext context, [Color? color]) =>
+      GoogleFonts.roboto(
+        fontSize: 14,
+        fontWeight: FontWeightHelper.regular,
+        color: color ?? context.color.textColor,
+      );
 }
