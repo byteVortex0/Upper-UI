@@ -7,6 +7,9 @@ import '../../features/account_setup/presentation/view/account_setup1.dart';
 import '../../features/account_setup/presentation/view/account_setup2.dart';
 import '../../features/account_setup/presentation/view/account_setup3.dart';
 import '../../features/account_setup/presentation/view/account_setup4.dart';
+import '../../features/account_verify/presentation/view/account_verify1.dart';
+import '../../features/account_verify/presentation/view/account_verify2.dart';
+import '../../features/account_verify/presentation/view/account_verify3.dart';
 
 class AppRoutes {
   static const String splash = 'splash';
@@ -15,6 +18,9 @@ class AppRoutes {
   static const String accountSetup2Path = '/accountSetup2Path';
   static const String accountSetup3Path = '/accountSetup3Path';
   static const String accountSetup4Path = '/accountSetup4Path';
+  static const String accountVerify1Path = '/accountVerify1Path';
+  static const String accountVerify2Path = '/accountVerify2Path';
+  static const String accountVerify3Path = '/accountVerify3Path';
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     // final args = settings.arguments;
     switch (settings.name) {
@@ -30,6 +36,12 @@ class AppRoutes {
         return BaseRoutes(page: AccountSetup3());
       case accountSetup4Path:
         return BaseRoutes(page: AccountSetup4());
+      case accountVerify1Path:
+        return BaseRoutes(page: AccountVerify1());
+      case accountVerify2Path:
+        return BaseRoutes(page: AccountVerify2());
+      case accountVerify3Path:
+        return BaseRoutes(page: AccountVerify3()); 
       default:
         return null;
     }

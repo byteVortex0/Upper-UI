@@ -53,4 +53,11 @@ class StyleManager {
         fontWeight: FontWeightHelper.regular,
         color: color ?? context.color.textColor,
       );
+
+      static TextStyle brand14Meduim(BuildContext context, [Color? color]) =>
+      GoogleFonts.roboto(
+        fontSize: 14,
+        fontWeight: FontWeightHelper.medium,
+        color: color ?? context.color.textColor,
+      );
 }

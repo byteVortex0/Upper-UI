@@ -3,7 +3,7 @@ import '../../../../core/utils/color_manager.dart';
 import '../../../../core/utils/fonts/style_manager.dart';
 import '../../../../core/utils/theme/color_theme_extension.dart';
 import 'widgets/account_setup_content_sec.dart';
-import 'widgets/app_bar_widget.dart';
+import '../../../../core/common/app_bar_widget.dart';
 import 'widgets/elevated_button_widget.dart';
 
 class AccountSetup4 extends StatefulWidget {

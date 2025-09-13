@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:upper/core/extensions/context_extension.dart';
 import '../../../../core/routes/app_routes.dart';
 import 'widgets/account_setup_content_sec.dart';
-import 'widgets/app_bar_widget.dart';
+import '../../../../core/common/app_bar_widget.dart';
 import 'widgets/elevated_button_widget.dart';
 import 'widgets/text_field_widget.dart';
 
