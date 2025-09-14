@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:upper/core/extensions/context_extension.dart';
+import '../../../../core/routes/app_routes.dart';
 import '../../../../core/utils/color_manager.dart';
 import '../../../../core/utils/fonts/style_manager.dart';
 import '../../../../core/utils/theme/color_theme_extension.dart';
@@ -25,7 +27,7 @@ class _AccountSetup4State extends State<AccountSetup4> {
   @override
   void initState() {
     super.initState();
-    selectedCountry = countries.first; 
+    selectedCountry = countries.first;
   }
 
   @override
@@ -39,7 +41,7 @@ class _AccountSetup4State extends State<AccountSetup4> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
-             AccountSetupContentSec(
+            AccountSetupContentSec(
               text1: "Country of residence",
               text2: "This info needs to be accurate with your ID document.",
             ),
@@ -55,30 +57,54 @@ class _AccountSetup4State extends State<AccountSetup4> {
                   borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
                 ),
                 enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
-            ),
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+                  borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.grey.shade300,
+                    width: 1.5,
+                  ),
+                ),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 14,
+                ),
               ),
               icon: const Icon(Icons.arrow_drop_down),
-              items: countries
-                  .map(
-                    (country) => DropdownMenuItem<Map<String, String>>(
-                      
-                      value: country,
-                      child: Row(
-                        children: [
-                          Text(country["flag"]!,style:  StyleManager.brand20Medium(context,colors.textColor)),
-                          const SizedBox(width: 8),
-                          Text(country["name"]!, style: StyleManager.brand16Medium(colors.textColor)),
-                        ],
-                      ),
-                    ),
-                  )
-                  .toList(),
+              items:
+                  countries
+                      .map(
+                        (country) => DropdownMenuItem<Map<String, String>>(
+                          value: country,
+                          child: Row(
+                            children: [
+                              Text(
+                                country["flag"]!,
+                                style: StyleManager.brand20Medium(
+                                  context,
+                                  colors.textColor,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+
+                              //TODO: see
+                              // Text(
+                              //   country["name"]!,
+                              //   style: StyleManager.brand16Medium(
+                              //     colors.textColor,
+                              //   ),
+                              // ),
+                              Text(
+                                country["name"]!,
+                                style: StyleManager.brand16Medium.copyWith(
+                                  color: colors.textColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                      .toList(),
               onChanged: (value) {
                 setState(() {
                   selectedCountry = value;
@@ -88,10 +114,11 @@ class _AccountSetup4State extends State<AccountSetup4> {
           ],
         ),
       ),
-      bottomNavigationBar:  ElevatedButtonWidget(
+      bottomNavigationBar: ElevatedButtonWidget(
         buttonColor: Color(0xff613DE4),
         textColor: Colors.white,
         onPressed: () {
+          context.pushReplacementNamed(AppRoutes.home);
         },
       ),
     );

@@ -63,7 +63,7 @@ class StepVerify1Widget extends StatelessWidget {
     final colors = Theme.of(context).extension<ColorThemeExtension>()!;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 11.0,),
+      padding: const EdgeInsets.symmetric(horizontal: 11.0),
       child: Column(
         children: [
           Row(
@@ -87,7 +87,14 @@ class StepVerify1Widget extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 10),
-              Text(text, style: StyleManager.brand16Medium(colors.textColor)),
+              //TODO: see
+              // Text(text, style: StyleManager.brand16Medium(colors.textColor)),
+              Text(
+                text,
+                style: StyleManager.brand16Medium.copyWith(
+                  color: colors.textColor,
+                ),
+              ),
               Spacer(),
               IconButton(onPressed: () {}, icon: Icon(icon, color: colorIcon)),
             ],

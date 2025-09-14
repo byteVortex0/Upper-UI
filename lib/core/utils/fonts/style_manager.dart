@@ -16,6 +16,7 @@ class StyleManager {
     ],
   );
 
+  //TODO: see
   // static TextStyle brand16Medium ([Color?color])=> GoogleFonts.roboto(
 
   static TextStyle white16Medium = GoogleFonts.roboto(
@@ -24,7 +25,7 @@ class StyleManager {
     color: Colors.white,
   );
 
-  static TextStyle brand16Medium([Color? color]) => GoogleFonts.roboto(
+  static TextStyle brand16Medium = GoogleFonts.roboto(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
     color: /* color?? */ LightColorManager.brandColor,
