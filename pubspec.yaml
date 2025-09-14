@@ -17,7 +17,10 @@ dependencies:
   flutter_screenutil: ^5.9.3
   shared_preferences: ^2.5.3
   google_fonts: ^6.3.1
+
+  fl_chart: ^0.69.0
   device_preview: ^1.2.0
+  flutter_bloc: ^9.1.1
 
 dev_dependencies:
   flutter_test:
@@ -31,6 +34,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/navBottom/
+    - assets/images/onboarding/
+    - assets/images/cryptocurrency/
 
   # example:
   # fonts:
