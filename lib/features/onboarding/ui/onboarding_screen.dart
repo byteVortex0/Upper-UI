@@ -116,7 +116,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   CustomButton(
                     onPressed: () {
                       if (_currentPage == pages.length - 1) {
-                        context.pushReplacementNamed(AppRoutes.home);
+                        context.pushReplacementNamed(
+                          AppRoutes.accountSetup1Path,
+                        );
                       } else {
                         _controller.nextPage(
                           duration: const Duration(milliseconds: 500),

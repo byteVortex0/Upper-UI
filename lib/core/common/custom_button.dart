@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
           ),
           padding: EdgeInsets.symmetric(vertical: 8.h),
         ),
-        child: Text(text ?? 'Next', style: StyleManager.brand20Medium),
+        child: Text(text ?? 'Next', style: StyleManager.brand20Medium(context)),
       ),
     );
   }
