@@ -20,7 +20,7 @@ class AccountVerify1 extends StatelessWidget {
             verifyContent(
               text1: "Setting up your account",
               text2: "We are analyzing your data to verify",
-              ImagePath: AppImages.accountVerifyImage1,
+              imagePath: AppImages.accountVerifyImage1,
             ),
             const SizedBox(height: 20),
             StepVerify1Widget(
@@ -47,17 +47,17 @@ class AccountVerify1 extends StatelessWidget {
 }
 
 class StepVerify1Widget extends StatelessWidget {
-  StepVerify1Widget({
+  const StepVerify1Widget({
     super.key,
     required this.textNum,
     required this.text,
     required this.icon,
     this.colorIcon = Colors.green,
   });
-  String textNum;
-  String text;
-  IconData icon;
-  Color colorIcon;
+  final String textNum;
+  final String text;
+  final IconData icon;
+  final Color colorIcon;
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).extension<ColorThemeExtension>()!;

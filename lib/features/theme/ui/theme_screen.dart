@@ -7,7 +7,6 @@ import 'package:upper/core/utils/fonts/style_manager.dart';
 import 'package:upper/features/theme/ui/widgets/toggle_icons.dart';
 
 import '../../../core/common/Custom_button.dart';
-import '../../../core/routes/app_routes.dart';
 import '../../../core/utils/app_images.dart';
 
 class ThemeScreen extends StatefulWidget {

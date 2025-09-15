@@ -19,7 +19,7 @@ class AccountVerify3 extends StatelessWidget {
             verifyContent(
               text1: "Scan ID document to verify your identity",
               text2: "Confirm your identity with just a few taps on your phone",
-              ImagePath: AppImages.accountVerifyImage3,
+              imagePath: AppImages.accountVerifyImage3,
             ),
             SizedBox(height: 20),
             verifyDetailsSec(

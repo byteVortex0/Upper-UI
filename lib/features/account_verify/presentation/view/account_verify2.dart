@@ -20,10 +20,10 @@ class AccountVerify2 extends StatelessWidget {
               text1: "Take selfie to verify your identity",
               text2:
                   "Quick and easy identification verification using your phone’s camera. Confirm your identity with a self-captured photo.",
-              ImagePath: AppImages.accountVerifyImage2,
+              imagePath: AppImages.accountVerifyImage2,
             ),
             SizedBox(height: 20),
-            verifyDetailsSec(text: "Take a selfie",icon: Icons.camera_alt,),
+            verifyDetailsSec(text: "Take a selfie", icon: Icons.camera_alt),
           ],
         ),
       ),

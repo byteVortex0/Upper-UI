@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/fonts/style_manager.dart';
 
 class verifyDetailsSec extends StatelessWidget {
-  verifyDetailsSec({super.key, required this.text, required this.icon});
-  String text;
-  IconData icon;
+  const verifyDetailsSec({super.key, required this.text, required this.icon});
+  final String text;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import '../../../../../core/utils/fonts/style_manager.dart';
 import '../../../../../core/utils/theme/color_theme_extension.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  TextFieldWidget({
+  const TextFieldWidget({
     super.key,
     required this.hintText,
     required this.topFieldText,
@@ -12,14 +12,14 @@ class TextFieldWidget extends StatelessWidget {
     this.isSuffixIcon = false,
     this.suffixIcon,
   });
-  String hintText;
-  String topFieldText;
-  bool isEmail;
-  bool isSuffixIcon;
-  IconData? suffixIcon;
+  final String hintText;
+  final String topFieldText;
+  final bool isEmail;
+  final bool isSuffixIcon;
+  final IconData? suffixIcon;
   @override
   Widget build(BuildContext context) {
-        final colors = Theme.of(context).extension<ColorThemeExtension>()!;
+    final colors = Theme.of(context).extension<ColorThemeExtension>()!;
 
     return Column(
       children: [

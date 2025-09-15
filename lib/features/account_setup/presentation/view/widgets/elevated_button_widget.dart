@@ -4,15 +4,15 @@ import '../../../../../core/utils/fonts/style_manager.dart';
 import '../../../../../core/utils/theme/color_theme_extension.dart';
 
 class ElevatedButtonWidget extends StatelessWidget {
-  ElevatedButtonWidget({
+  const ElevatedButtonWidget({
     super.key,
     this.buttonColor,
     required this.textColor,
     required this.onPressed,
   });
-  Color? buttonColor; // const Color(0xff613DE4);
-  Color textColor; // Colors.white;
-  VoidCallback onPressed;
+  final Color? buttonColor; // const Color(0xff613DE4);
+  final Color textColor; // Colors.white;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(

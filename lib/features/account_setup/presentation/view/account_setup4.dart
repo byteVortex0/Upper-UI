@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upper/core/extensions/context_extension.dart';
 import '../../../../core/routes/app_routes.dart';
-import '../../../../core/utils/color_manager.dart';
 import '../../../../core/utils/fonts/style_manager.dart';
 import '../../../../core/utils/theme/color_theme_extension.dart';
 import 'widgets/account_setup_content_sec.dart';

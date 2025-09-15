@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/fonts/style_manager.dart';
 
 class AccountSetupContentSec extends StatelessWidget {
-  AccountSetupContentSec({required this.text1, required this.text2, super.key});
-  String text1;
-  String text2;
+  const AccountSetupContentSec({
+    required this.text1,
+    required this.text2,
+    super.key,
+  });
+  final String text1;
+  final String text2;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,6 @@ class AccountSetupContentSec extends StatelessWidget {
         SizedBox(
           width: 290,
           child: Text(text2, style: StyleManager.brand14Regular(context)),
-
         ),
       ],
     );
