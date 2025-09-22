@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:upper/core/common/custom_button.dart';
+import 'package:upper/core/common/custom_button2.dart';
 import 'package:upper/core/extensions/context_extension.dart';
-import 'package:upper/core/utils/color_manager.dart';
 import 'package:upper/features/home/widgets/analysis/article_tab_search.dart';
 import 'package:upper/features/home/widgets/wallet/crypto_donut_chart.dart';
 import 'package:upper/features/home/widgets/wallet/review_list_item.dart';
@@ -94,31 +94,7 @@ class ReviewTab extends StatelessWidget {
 
           SizedBox(height: 10.h),
 
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                shadowColor: Colors.transparent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4.r),
-                  side: BorderSide(
-                    color: LightColorManager.brandColor,
-                    width: 1,
-                  ),
-                ),
-                padding: EdgeInsets.symmetric(vertical: 8.h),
-              ),
-              child: Text(
-                'View all',
-                style: StyleManager.white16Regular(
-                  context,
-                ).copyWith(fontWeight: FontWeightHelper.medium),
-              ),
-            ),
-          ),
+          CustomButton2(onPressed: () {}, text: 'View all'),
 
           SizedBox(height: 30.h),
         ],

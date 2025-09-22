@@ -16,9 +16,6 @@ class StyleManager {
     ],
   );
 
-  //TODO: see
-  // static TextStyle brand16Medium ([Color?color])=> GoogleFonts.roboto(
-
   static TextStyle white16Medium = GoogleFonts.roboto(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
@@ -56,6 +53,7 @@ class StyleManager {
         fontWeight: FontWeightHelper.regular,
         color: color ?? context.color.textColor,
       );
+
   static TextStyle brand14Regular(BuildContext context, [Color? color]) =>
       GoogleFonts.roboto(
         fontSize: 14,
@@ -99,8 +97,20 @@ class StyleManager {
     color: context.color.textColor,
   );
 
+  static TextStyle white12Regular(BuildContext context) => GoogleFonts.roboto(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: context.color.textColor,
+  );
+
   static TextStyle white20Medium(BuildContext context) => GoogleFonts.roboto(
     fontSize: 20.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: context.color.textColor,
+  );
+
+  static TextStyle white24Medium(BuildContext context) => GoogleFonts.roboto(
+    fontSize: 24.sp,
     fontWeight: FontWeightHelper.medium,
     color: context.color.textColor,
   );

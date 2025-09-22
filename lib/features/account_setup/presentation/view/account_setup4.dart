@@ -117,7 +117,7 @@ class _AccountSetup4State extends State<AccountSetup4> {
         buttonColor: Color(0xff613DE4),
         textColor: Colors.white,
         onPressed: () {
-          context.pushReplacementNamed(AppRoutes.home);
+          context.pushReplacementNamed(AppRoutes.register);
         },
       ),
     );
