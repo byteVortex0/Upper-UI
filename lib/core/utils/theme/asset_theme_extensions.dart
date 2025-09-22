@@ -18,6 +18,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
   final String? confirmation;
   final String? exchange;
   final String? story;
+  final String? register;
 
   const AssetThemeExtension({
     required this.themeImage,
@@ -35,6 +36,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
     required this.confirmation,
     required this.exchange,
     required this.story,
+    required this.register,
   });
 
   @override
@@ -54,6 +56,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
     String? confirmation,
     String? exchange,
     String? story,
+    String? regiter,
   }) {
     return AssetThemeExtension(
       themeImage: themeImage ?? this.themeImage,
@@ -71,6 +74,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
       confirmation: confirmation ?? this.confirmation,
       exchange: exchange ?? this.exchange,
       story: story ?? this.story,
+      register: regiter ?? this.register,
     );
   }
 
@@ -98,6 +102,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
       confirmation: other.confirmation,
       exchange: other.exchange,
       story: other.story,
+      register: other.register,
     );
   }
 
@@ -117,6 +122,7 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
     confirmation: AppImages.confirmationLight,
     exchange: AppImages.exchangeLight,
     story: AppImages.storyLight,
+    register: AppImages.registerLight,
   );
   static const AssetThemeExtension dark = AssetThemeExtension(
     themeImage: AppImages.darkTheme,
@@ -134,5 +140,6 @@ class AssetThemeExtension extends ThemeExtension<AssetThemeExtension> {
     confirmation: AppImages.confirmationDark,
     exchange: AppImages.exchangeDark,
     story: AppImages.storyDark,
+    register: AppImages.registerDark,
   );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:upper/core/routes/base_routes.dart';
+import 'package:upper/features/auth/ui/auth_screen.dart';
 import 'package:upper/features/splash/ui/splash_screen.dart';
 import 'package:upper/features/theme/ui/theme_screen.dart';
 
@@ -12,6 +13,7 @@ import '../../features/account_verify/presentation/view/account_verify2.dart';
 import '../../features/account_verify/presentation/view/account_verify3.dart';
 import '../../features/home/ui/home_screen.dart';
 import '../../features/onboarding/ui/onboarding_screen.dart';
+import '../../features/register/ui/register_screen.dart';
 
 class AppRoutes {
   static const String splash = 'splash';
@@ -25,9 +27,11 @@ class AppRoutes {
   static const String accountVerify3Path = '/accountVerify3Path';
   static const String onboarding = 'onboarding';
   static const String home = 'home';
+  static const String register = 'register';
+  static const String auth = 'auth';
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
-    // final args = settings.arguments;
+    final args = settings.arguments;
     switch (settings.name) {
       case splash:
         return BaseRoutes(page: SplashScreen());
@@ -51,6 +55,11 @@ class AppRoutes {
         return BaseRoutes(page: OnboardingScreen());
       case home:
         return BaseRoutes(page: HomeScreen());
+      case register:
+        return BaseRoutes(page: RegisterScreen());
+      case auth:
+        return BaseRoutes(page: AuthScreen(selectedIndex: args as int));
+
       default:
         return null;
     }

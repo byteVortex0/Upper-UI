@@ -69,4 +69,8 @@ class AppImages {
   static const String exchangeDark = 'assets/images/navBottom/exchangeDark.png';
   static const String storyLight = 'assets/images/navBottom/clockLight.png';
   static const String storyDark = 'assets/images/navBottom/clockDark.png';
+
+  //register
+  static const String registerLight = 'assets/images/light_registration.png';
+  static const String registerDark = 'assets/images/dark_registration.png';
 }
