@@ -22,7 +22,7 @@ class ChartWidget extends StatelessWidget {
         }).reversed.toList();
 
     return SizedBox(
-      height: 400,
+      height: 290,
       child: cs.Candlesticks(candles: sampleCandles),
     );
   }
