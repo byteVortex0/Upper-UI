@@ -63,7 +63,6 @@ class _BtcPageState extends State<BtcPage> with SingleTickerProviderStateMixin {
               ),
             ),
 
-            //trending chart
             ChartWidget(),
             const SizedBox(height: 8),
             Container(
