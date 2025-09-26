@@ -29,6 +29,7 @@ class AppImages {
   static const String filterLight = 'assets/images/filterLight.png';
   static const String filterDark = 'assets/images/filterDark.png';
   static const String bitcoin = 'assets/images/bitcoin.png';
+  static const String btc = 'assets/images/btc.png';
   static const String dollar = 'assets/images/dollar.png';
   static const String strategyPreview = 'assets/images/strategy_preview.png';
 
@@ -48,7 +49,10 @@ class AppImages {
   static const String cryptocurrency7 =
       'assets/images/cryptocurrency/cryptocurrency7.png';
   static const String longArrow = 'assets/images/longArrow.png';
-
+static const String ETH = 'assets/images/ETH.png';
+  static const String matic = 'assets/images/matic.png';
+  static const String xrp = 'assets/images/XRB.png';
+  static const String xmy = 'assets/images/XMY.png';
   //nav bottom
   static const String homeDark = 'assets/images/navBottom/homeDark.png';
   static const String calendarLight =
