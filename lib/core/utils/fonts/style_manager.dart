@@ -25,7 +25,7 @@ class StyleManager {
   static TextStyle brand16Medium = GoogleFonts.roboto(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
-    color: /* color?? */ LightColorManager.brandColor,
+    color:  LightColorManager.brandColor,
   );
 
   static TextStyle brand20Medium(BuildContext context, [Color? color]) =>

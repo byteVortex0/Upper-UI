@@ -6,6 +6,7 @@ import 'package:upper/features/home/widgets/analysis/analysis_page.dart';
 
 import '../../../core/utils/fonts/font_weight_helper.dart';
 import '../widgets/build_bottom_nav_for_tab.dart';
+import '../widgets/trade/presentation/view/widgets/build_middle_widget.dart';
 import '../widgets/trade_page.dart';
 import '../widgets/wallet/wallet_page.dart';
 
@@ -121,7 +122,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: buildBottomNavForTab(selectedIndex, context),
+
+      floatingActionButton:
+          selectedIndex == 0
+              ? FloatingActionButton(
+                onPressed: () {},
+                child: buildMiddleButton(() {}),
+              )
+              : null,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: buildBottomNavForTab(
+        selectedIndex: selectedIndex,
+        context: context,
+        onItemTapped: (int index) {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
+      ),
     );
   }
 }
