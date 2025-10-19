@@ -1,16 +1,24 @@
-# upper
+# 💹 Upper - Crypto & Market UI Design
 
-A new Flutter project.
+**Upper** is a modern Flutter UI design project for a **crypto and stock market app**.  
+It focuses on **user interface and visualization**, featuring login screens, charts, and dashboard layouts.  
+This project is design-only — no backend or real-time market data integration yet.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🎥 Demo
+[![Watch the demo](https://img.youtube.com/vi/6b36DWBWI1c/0.jpg)](https://youtu.be/6b36DWBWI1c)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Features (Design Only)
+
+- 🔐 Login & Registration screens  
+- 📊 Multiple charts for crypto & stock trends (line, bar, candlestick)  
+- 💼 Portfolio overview with current balances  
+- 🌐 Market overview with trending coins/stocks  
+- ⭐ Favorite/watchlist section  
+- 🖌️ Clean & modern color palette and typography  
+- 🌙 Light & Dark theme support  
+- 📱 Fully responsive UI for mobile devices  
